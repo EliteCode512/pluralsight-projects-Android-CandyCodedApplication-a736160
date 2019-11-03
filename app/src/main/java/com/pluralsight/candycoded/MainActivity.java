@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = db.rawQuery("SELECT * FROM candy", null);
 
         final CandyCursorAdapter adapter = new CandyCursorAdapter(this, cursor);
-        ListView listView = (ListView)this.findViewById(R.id.list_view_candy);
+        ListView listView = this.findViewById(R.id.list_view_candy);
 
         listView.setAdapter(adapter);
 
@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent InfoIntent = new Intent(this, InfoActivity.class);
-        startActivity(InfoIntent);
+        Intent Info1Intent = new Intent(this, InfoActivity.class);
+        startActivity(Info1Intent);
     return super.onOptionsItemSelected(item);
     }
 
